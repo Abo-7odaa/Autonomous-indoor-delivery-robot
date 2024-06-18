@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Command Line Argument to Select world -->
+  <arg name="world" default="plaza_world" doc="available worlds: [plaza_world, turtlebot3_world, turtlebot3_house]"/>
+
+  <!-- Launch the gazebo world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find rafiq_description)/worlds/office/office_part1/service.world"/>
+  </include>
+
+  <!-- Load the robot model in the parameter server into the gazebo world -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" output="screen"
+  args="-urdf -model my_robo -param robot_description -x 1.0 -y 20.0 -z 0.0 -R 0.0 -P 0.0 -Y -1.57" />
+
+</launch>

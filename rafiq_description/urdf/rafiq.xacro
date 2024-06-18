@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rafiq">
+  <link name="base_footprint" />
+    <!--============================== BASE LINK ==============================-->
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+      xyz="0 0 .03"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+        <inertia
+        ixx="0.0281986379220292"
+        ixy="-1.54969534356879E-08"
+        ixz="1.67419517921328E-05"
+        iyy="0.0348168488120187"
+        iyz="5.38452942797266E-09"
+        izz="0.0480032612860798" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rafiq_description/meshes/base.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rafiq_description/meshes/base.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--============================== BASE JOINT ==============================-->
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0 0 .01667" rpy="0 0 0" />
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <!--============================== LEFT WHEEL LINK ==============================-->
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+      xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.17" />
+        <inertia
+        ixx="0.000141634049666771"
+        ixy="8.19372360079445E-10"
+        ixz="-2.82527716545425E-10"
+        iyy="0.000225274306628926"
+        iyz="-6.26374039710783E-10"
+        izz="0.000141633731042229" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <cylinder length="0.059" radius="0.065" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <cylinder length="0.059" radius="0.065" />
+      </geometry>
+    </collision>
+  </link>
+  <!--============================== LEFT WHEEL JOINT ==============================-->
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+    xyz="0.000327703652599007 0.106568319358363 0.0467"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <!--============================== RIGHT WHEEL LINK ==============================-->
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.17" />
+        <inertia
+        ixx="0.000141633837280104"
+        ixy="7.59140527866516E-10"
+        ixz="-3.19977216581983E-10"
+        iyy="0.000225274306628926"
+        iyz="-6.98155542393904E-10"
+        izz="0.000141633943428896" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 3.14159265" />
+      <geometry>
+        <cylinder length="0.059" radius="0.065" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <cylinder length="0.059" radius="0.065" />
+      </geometry>
+    </collision>
+  </link>
+  <!--============================== RIGHT WHEEL JOINT ==============================-->
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+    xyz="0.000547368914034275 -0.106568319358363 0.0467"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <!--============================== LIDAR LINK ==============================-->
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+       xyz="0.0121634872390592 -0.0287648173608937 0.000482107920060997"
+        rpy="0 0 0" />
+      <mass
+        value="0.0" />
+      <inertia
+        ixx="1.95803871190446E-05"
+        ixy="-4.2835918128486E-07"
+        ixz="1.03960448091387E-07"
+        iyy="4.14180879507334E-05"
+        iyz="-9.4368343851919E-09"
+        izz="2.41251345242122E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rafiq_description/meshes/lidar.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rafiq_description/meshes/lidar.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--============================== LIDAR JOINT ==============================-->
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+    xyz="0.0215699163387691 -4.99776723509351E-05 0.27"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <!--============================== FRONT CASTER WHEEL LINK ==============================-->
+  <link
+    name="front_caster_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+        <inertia ixx="0.0012185" ixy="1.8059E-20" ixz="3.0427E-20" iyy="0.0012185" iyz="-4.0491E-20" izz="0.0022928" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <sphere radius=".015"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <sphere radius=".015"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--============================== FRONT CASTER WHEEL JOINT ==============================-->
+  <joint
+    name="front_caster_wheel_joint"
+    type="fixed">
+    <origin
+    xyz="0.165075 0 -.0017"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_caster_wheel_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <!--============================== BACK CASTER WHEEL LINK ==============================-->
+  <link
+    name="back_caster_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.0142873132886431 0.0123699340352305 -0.00687114312686007"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+        <inertia ixx="0.0012185" ixy="1.8059E-20" ixz="3.0427E-20" iyy="0.0012185" iyz="-4.0491E-20" izz="0.0022928" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <sphere radius=".015"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <sphere radius=".015"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--============================== BACK CASTER WHEEL JOINT ==============================-->
+  <joint
+    name="back_caster_wheel_joint"
+    type="fixed">
+    <origin
+    xyz="-0.165075 0 -.0017"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_caster_wheel_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <!--============================== BODY LINK ==============================-->
+  <link
+    name="body_link">
+    <inertial>
+      <origin
+       xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0" />
+        <inertia
+        ixx="6.16782029579856E-05"
+        ixy="-7.72498999858436E-10"
+        ixz="1.69486893494317E-10"
+        iyy="4.46075029717737E-05"
+        iyz="1.0218174408594E-06"
+        izz="6.04968639240338E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="-1.571 0 3.141" />
+      <geometry>
+        <mesh
+          filename="package://rafiq_description/meshes/body.STL"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.571 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rafiq_description/meshes/Part2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+    <!--============================== BODY JOINT ==============================-->
+    <joint
+    name="body_joint"
+    type="fixed">
+    <origin
+    xyz="0.0 0.0 0.295"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="body_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+    <!--========================================== DIFF DRIVE PLUGIN - GAZEBO ==========================================-->
+
+	<gazebo>
+	  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+		<!-- Plugin update rate in Hz -->
+		<updateRate>10</updateRate>
+		<!-- Name of left joint, defaults to `left_joint` -->
+		<leftJoint>left_wheel_joint</leftJoint>
+		<!-- Name of right joint, defaults to `right_joint` -->
+		<rightJoint>right_wheel_joint</rightJoint>
+		<!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
+		<wheelSeparation>0.212</wheelSeparation>
+		<!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
+		<wheelDiameter>0.13</wheelDiameter>
+		<!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
+		<wheelAcceleration>0.75</wheelAcceleration>
+		<!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
+		<wheelTorque>0.34323275</wheelTorque>
+		<!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
+		<commandTopic>cmd_vel</commandTopic>
+		<!-- Topic to publish nav_msgs/Odometry messages, defaults to `odom` -->
+		<odometryTopic>odom</odometryTopic>
+		<!-- Odometry frame, defaults to `odom` -->
+		<odometryFrame>odom</odometryFrame>
+		<!-- Robot frame to calculate odometry from, defaults to `base_footprint` -->
+		<robotBaseFrame>base_footprint</robotBaseFrame>
+		<!-- Odometry source, 0 for ENCODER, 1 for WORLD, defaults to WORLD -->
+		<odometrySource>1</odometrySource>
+		<!-- Set to true to publish transforms for the wheel links, defaults to false -->
+		<publishWheelTF>false</publishWheelTF>
+		<!-- Set to true to publish transforms for the odometry, defaults to true -->
+		<publishOdom>true</publishOdom>
+		<!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
+		<publishWheelJointState>false</publishWheelJointState>
+		<!-- Set to true to swap right and left wheels, defaults to true -->
+		<legacyMode>false</legacyMode>
+	  </plugin>
+	</gazebo>
+
+
+
+  <!--========================================== LIDAR PLUGIN - GAZEBO ==========================================-->
+  <!--Sample size of 4000 (original value of RPLidarA1M8) gives an error-->
+  <gazebo reference="lidar_link">
+      <!--sensor type="gpu_ray" name="laser"-->
+      <sensor type="ray" name="laser">
+          <pose>0 0 0 0 0 0</pose>
+          <visualize>true</visualize>
+          <update_rate>40</update_rate>
+          <ray>
+              <scan>
+                  <horizontal>
+                      <samples>720</samples>
+                      <resolution>1</resolution>
+                      <min_angle>0</min_angle>
+                      <max_angle>6.28</max_angle>
+                  </horizontal>
+              </scan>
+              <range>
+                  <min>0.1</min>
+                  <max>6</max>
+                  <resolution>0.1</resolution>
+              </range>
+          </ray>
+          <!--plugin name="gpu_laser" filename="libgazebo_ros_gpu_laser.so"-->
+          <plugin name="gpu_laser" filename="libgazebo_ros_laser.so">
+              <topicName>/scan</topicName>
+              <frameName>lidar_link</frameName>
+          </plugin>
+      </sensor>
+  </gazebo>
+
+
+
+
+  <!--========================================== JOINT STATE PUBLISHER PLUGIN - GAZEBO ==========================================-->
+     <!--gazebo>
+        <plugin name="joint_state_publisher"
+                filename="libgazebo_ros_joint_state_publisher.so">
+            <jointName>left_wheel_joint, right_wheel_joint, castor_wheel_joint</jointName>
+        </plugin>
+    </gazebo-->
+</robot>

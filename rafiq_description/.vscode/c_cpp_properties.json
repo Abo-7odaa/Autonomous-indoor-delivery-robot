@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/mahmoud/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/mahmoud/catkin_ws/src/beginner_tutorials/include/**",
+        "/home/mahmoud/catkin_ws/src/TurtleSim-Sketch-master/dynamic_reconfigure-noetic-devel/include/**",
+        "/home/mahmoud/catkin_ws/src/DynamixelSDK/ros/dynamixel_sdk/include/**",
+        "/home/mahmoud/catkin_ws/src/my_ROS_mobile_robot/my_robot_base/include/**",
+        "/home/mahmoud/catkin_ws/src/BumbleBot_WS-noetic-devel/src/rf2o_laser_odometry/include/**",
+        "/home/mahmoud/catkin_ws/src/BumbleBot_WS-noetic-devel/src/robot_pose_ekf/include/**",
+        "/home/mahmoud/catkin_ws/src/rqt-turtle-master/rqt_turtle/include/**",
+        "/home/mahmoud/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/mahmoud/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/mahmoud/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
