@@ -1,0 +1,7 @@
+*.js linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
+
+*.cpp linguist-detectable=true
+*.h linguist-detectable=true
+*.py linguist-detectable=true
