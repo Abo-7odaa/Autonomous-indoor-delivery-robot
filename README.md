@@ -43,6 +43,20 @@ To lanunch pyhsical robot (using Rpi 4)
 ```bash
 $roslaunch rafiq_bringup navigation_pi.launch
 ```
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="Docs/navigation.png" width="400px" alt="RViz Visualization"/>
+      <br>
+      <b>RViz</b>
+    </td>
+    <td align="center">
+      <img src="Docs/navigationSim.png" width="400px" alt="Gazebo Simulation"/>
+      <br>
+      <b>Gazebo</b>
+    </td>
+  </tr>
+</table>
 ---
 
 ## ⚠️ Important Note for Real Hardware Deployment
@@ -54,5 +68,5 @@ Before using the **Real Hardware launch files**, please ensure the following con
 3. **On-board Environment:** Ensure that the **Raspberry Pi** (or your SBC) has the proper environment installed:
    * **ROS Noetic** (properly sourced).
    * All required sensor drivers.
-   * Communication libraries (like `rosserial`.
+   * Communication libraries (like `rosserial`).
 4. **Emergency Stop:** It is **highly recommended** to integrate a physical emergency switch into the robot's power circuit.
