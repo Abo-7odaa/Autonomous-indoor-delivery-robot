@@ -1,7 +1,55 @@
-*.js linguist-vendored
-*.html linguist-vendored
-*.css linguist-vendored
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-*.cpp linguist-detectable=true
-*.h linguist-detectable=true
-*.py linguist-detectable=true
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Eclipse
+.cproject
+.project
+.settings
+*.pydevproject
+
+# ROS
+build
+devel
+logs
+.catkin_tools
+
+# Python
+*.pyc
+
+# OS X
+.DS_Store
+
+
+# Custom
+docs/plots
+.vscode
+.pio
+
+# intermediate documentation
+site 
